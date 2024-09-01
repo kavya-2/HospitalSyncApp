@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  doctor: one
+  patient: one
+  last_sync_time: 2024-08-31 12:41:24
+  updated_by_doctor_id: 1
+  sync_status: MyString
+
+two:
+  doctor: two
+  patient: two
+  last_sync_time: 2024-08-31 12:41:24
+  updated_by_doctor_id: 1
+  sync_status: MyString

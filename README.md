@@ -1,24 +1,16 @@
-# README
+# HospitalSyncApp
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Rails application for syncing patient data across multiple doctors.
 
-Things you may want to cover:
+## Setup Instructions
 
-* Ruby version
+1. Clone the repository.
+2. Run `bundle install` to install required gems.
+3. Set up the database with `rails db:create db:migrate`.
+4. Start the server with `rails server`.
 
-* System dependencies
+## API Endpoints
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- `POST /api/v1/sync`: Synchronizes patient data.
+- `GET /api/v1/patients`: Fetches all patients.
+- `PUT /api/v1/patients/:id`: Updates a patient's information.

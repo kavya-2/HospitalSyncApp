@@ -1,0 +1,10 @@
+<div class="links">
+  <% if doctor_signed_in? %>
+    <%= link_to "Edit your profile", edit_doctor_registration_path, class: "nav-link" %><br />
+    <%= link_to "Log out", destroy_doctor_session_path, method: :delete, class: "nav-link" %>
+  <% else %>
+    <%= link_to "Sign up", new_doctor_registration_path, class: "nav-link" %><br />
+    <%= link_to "Log in", new_doctor_session_path, class: "nav-link" %><br />
+    <%= link_to "Forgot your password?", new_doctor_password_path, class: "nav-link" %>
+  <% end %>
+</div>

@@ -11,6 +11,11 @@ gem "sprockets-rails"
 
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
+gem 'devise'       # For authentication
+gem 'pundit'       # Authorization
+gem 'bootstrap', '~> 5.3.0' # Bootstrap for UI
+gem 'jquery-rails' # jQuery for Bootstrap
+gem 'kaminari'     # Pagination for large datasets
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
@@ -43,7 +48,7 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 
 # Use Sass to process CSS
-# gem "sassc-rails"
+gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"

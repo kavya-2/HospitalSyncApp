@@ -1,0 +1,11 @@
+<div class="container mt-4">
+  <h2>Doctor Details</h2>
+  <ul class="list-group">
+    <li class="list-group-item"><strong>Name:</strong> <%= @doctor.name %></li>
+    <li class="list-group-item"><strong>Email:</strong> <%= @doctor.email %></li>
+  </ul>
+  <div class="mt-3">
+    <%= link_to 'Edit', edit_doctor_path(@doctor), class: 'btn btn-primary' %>
+    <%= link_to 'Back to list', doctors_path, class: 'btn btn-secondary' %>
+  </div>
+</div>

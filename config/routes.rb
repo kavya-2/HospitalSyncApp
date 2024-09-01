@@ -1,6 +1,17 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  devise_for :doctors, controllers: { registrations: 'doctors/registrations' }
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  root to: 'doctors/sessions#new'
+  # root to: 'doctors/registrations#new'
+  # root to: 'api/v1/patients#index'
+
+  get 'dashboard', to: 'api/v1/patients#index', as: :doctor_dashboard
+  resources :doctors, only: [:index, :show, :edit, :update]
+
+  namespace :api do
+    namespace :v1 do
+      resources :patients, only: [:index, :update]
+      post 'sync', to: 'sync#create'
+    end
+  end
 end
